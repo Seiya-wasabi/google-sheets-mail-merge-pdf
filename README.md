@@ -66,11 +66,15 @@ hard-coded ID.
 A step-by-step write-up of the same script, with the reasoning behind each line:
 [How to mail merge to PDF from Google Sheets](https://bulkmerge.sumitsubo.com/how-to/mail-merge-to-pdf-from-google-sheets).
 
+What a mail merge actually needs access to, and how to read the consent screen before you click Allow:
+[Before You Click "Allow": What a Google Sheets Mail Merge Really Needs](https://medium.com/@se.sato614/before-you-click-allow-what-a-google-sheets-mail-merge-really-needs-6c27740259d5) (Medium).
+
 ## If you would rather not maintain a script
 
 Disclosure: I make **Bulk Email & PDF Mail Merge**, a Google Sheets add-on that does this same job with
 a preview that sends nothing, a status column so re-runs never email anyone twice, pausing at the daily
-quota, and only `drive.file` plus send-only mail permissions. Free for 20 recipients a day:
+quota, and no restricted scopes: `drive.file`, send-only mail, and four small ones listed with Google's
+classification on its [privacy page](https://bulkmerge.sumitsubo.com/privacy). Free for 20 recipients a day:
 [Google Workspace Marketplace listing](https://workspace.google.com/marketplace/app/bulk_email_pdf_mail_merge_for_google_she/850815834962).
 
 The script in this repository is complete and yours to use either way.
