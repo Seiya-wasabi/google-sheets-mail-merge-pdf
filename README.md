@@ -42,8 +42,8 @@ Run `mergeToPdfAndEmail`. **Point every Email at yourself for the first run.**
 ## Three things that break most versions of this script
 
 - **`replaceText` takes a regular expression.** `{` and `}` are regex syntax, so the script escapes them
-  (`'\\{\\{' + key + '\\}\\}'`). A replacement value containing `$` can also be read as a group
-  reference — check currency amounts in the first PDF.
+  (`'\\{\\{' + key + '\\}\\}'`). Google's documentation does not say how symbols such as `$` in the
+  replacement value are treated, so check values with symbols (currency amounts) in the first PDF.
 - **`doc.saveAndClose()` before `getAs()`.** Without it the export can run before the edits are written,
   and you get a PDF of the untouched template while the script reports success.
 - **Six minutes per execution.** PDF export is slow; a long list hits Apps Script's execution limit
